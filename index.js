@@ -5,6 +5,7 @@
  * 
  */
 
+
 const express       = require('express');
 const request       = require('request');
 const { RTMClient } = require('@slack/rtm-api');
@@ -37,8 +38,10 @@ app.listen(port, () =>  console.log(`Server listening on port ${port}`));
 bot.start()
     .catch(console.error);
 
+// TODO - Gestion de la casse 
 bot.on('message', (event) => {
     console.log(event);
+
     // Bot should answer only if he was tag into a message
     if((event.text).includes('UH7D2954Z')){
         let message = '';
@@ -59,6 +62,18 @@ bot.on('message', (event) => {
                 break;
             case 'Ca va?':
                 message = 'Evite ce genre de question, je vais finir par faire une random'; 
+                break;
+            case 'Tu joues a wow?':
+                text = 'Evidemment! J\'ai croisé un nain noir roux l\'autre jour';
+                break;
+            case 'Test':
+                text = 'Faudrait déjà que tu installes MochaJS pour tester quelque choses...';
+                break;
+            case 'As-tu des sentiments?':
+                text = 'Bien sûr ! Beaucoup de choses me font vibrer.';
+                break;
+            case 'Peux-tu nettoyer ma chambre?':
+                text = 'C3P0 a des jambes et des bras et le fera bien mieux que moi.';
                 break;
             default: 
                 message = 'T\'as oublié un ; dans le code, ça risque pas de marcher.';
