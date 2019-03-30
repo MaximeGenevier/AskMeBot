@@ -20,6 +20,9 @@
     "eslint": "^5.16.0"
   },
   "dependencies": {
+    "@slack/events-api": "^2.2.0",
+    "@slack/rtm-api": "^5.0.0",
+    "@slack/web-api": "^5.0.0",
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
     "recastai": "^4.0.0",
