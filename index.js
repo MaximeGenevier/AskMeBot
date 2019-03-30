@@ -39,24 +39,26 @@ bot.start()
 
 bot.on('message', (event) => {
     console.log(event);
-    let text = 'Random';
+    if(event.text.includes('UH7D2954Z')){
+        let text = 'Random';
 
-    switch(event.text) {
-        case 'Bonjour': 
-            text = 'Bonjour ça va?';
-            break;
-        case 'Oui et toi?':
-            text = 'Pas mal, j\' ai pas de cerveau mais on fait avec';
-            break;
-        case 'Non ça va pas' : 
-            text = 'Ta vie est cool.'
-            break;
-        case 'Ca va?':
-            text = 'Evite ce genre de question, je vais finir par faire une random'; 
-    }
-    if(text != 'Random') {
-    bot.sendMessage(text, conversationID)
-        .then(console.log)
-        .catch(console.error);
+        switch(event.text) {
+            case 'Bonjour': 
+                text = 'Bonjour ça va?';
+                break;
+            case 'Oui et toi?':
+                text = 'Pas mal, j\' ai pas de cerveau mais on fait avec';
+                break;
+            case 'Non ça va pas' : 
+                text = 'Ta vie est cool.'
+                break;
+            case 'Ca va?':
+                text = 'Evite ce genre de question, je vais finir par faire une random'; 
+        }
+        if(text != 'Random') {
+        bot.sendMessage(text, conversationID)
+            .then(console.log)
+            .catch(console.error);
+        }
     }
 });
