@@ -5,6 +5,7 @@
  * 
  */
 
+
 const express       = require('express');
 const request       = require('request');
 const { RTMClient } = require('@slack/rtm-api');
@@ -57,7 +58,14 @@ bot.on('message', (event) => {
         case 'ca va?':
             text = 'Evite ce genre de question, je vais finir par faire une random'; 
         case 'tu joue a wow?':
-            text = 'Oui, pour la Horde!'; 
+            text = 'Oui, pour la Horde!';
+        case 'test':
+            text = 'Ouh la, les tests me donnent le trac.';
+        case 'as-tu des sentiments?':
+            text = 'Bien sûr ! Beaucoup de choses me font vibrer.';
+        case 'peux-tu nettoyer ma chambre?':
+            text = 'C3P0 a des jambes et des bras et le fera bien mieux que moi.';
+        
     }
     if(text != 'Random') {
     bot.sendMessage(text, conversationID)
