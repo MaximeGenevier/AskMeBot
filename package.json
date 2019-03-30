@@ -1,0 +1,29 @@
+{
+  "name": "askmebot",
+  "version": "1.0.0",
+  "description": "Bot with some API",
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/eslint/bin/eslint.js --cache --fix ./app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaximeGenevier/AskMeBot.git"
+  },
+  "author": "Romain VENEL - Tristan LEMIRE - Maxime GENEVIER",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MaximeGenevier/AskMeBot/issues"
+  },
+  "homepage": "https://github.com/MaximeGenevier/AskMeBot#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0"
+  },
+  "dependencies": {
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "recastai": "^4.0.0",
+    "request": "^2.88.0",
+    "slack": "^11.0.2"
+  }
+}
