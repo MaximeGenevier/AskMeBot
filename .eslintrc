@@ -1,0 +1,11 @@
+{
+    "extends": "eslint:recommended", 
+    "rules": {
+        "quotes": [2, "single"], 
+        "no-alert": 0,
+        "properties": "always",
+        "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
+        "no-shadow": ["error", { "builtinGlobals": false, "hoist": "functions", "allow": [] }],
+        "no-var": 1
+    }
+}
