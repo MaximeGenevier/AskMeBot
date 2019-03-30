@@ -64,7 +64,7 @@ bot.on('message', (event) => {
         case 'as-tu des sentiments?':
             text = 'Bien sûr ! Beaucoup de choses me font vibrer.';
         case 'peux-tu nettoyer ma chambre?':
-            text = 'C3P0 a des jambes et des bras et le fera bien mieux que moi.';
+            text = 'C3P0 a des jambes et des bras et le fera bien mieux que moi.';  
         
     }
     if(text != 'Random') {
