@@ -37,6 +37,7 @@ app.listen(port, () =>  console.log(`Server listening on port ${port}`));
 bot.start()
     .catch(console.error);
 
+// TODO - Gestion de la casse 
 bot.on('message', (event) => {
     console.log(event);
     let text = 'Random';
