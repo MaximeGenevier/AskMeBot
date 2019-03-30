@@ -39,26 +39,36 @@ bot.start()
 
 bot.on('message', (event) => {
     console.log(event);
-    if(event.text.includes('UH7D2954Z')){
-        let text = 'Random';
+    // Bot should answer only if he was tag into a message
+    if((event.text).includes('UH7D2954Z')){
+        let message = '';
+        // Trim text
+        let text = (event.text).replace('<@UH7D2954Z> ', '');
 
-        switch(event.text) {
+        // Handle differents sentences 
+        // TODO : Replace with Recast AI
+        switch(text) {
             case 'Bonjour': 
-                text = 'Bonjour ça va?';
+                message = 'Bonjour ça va?';
                 break;
             case 'Oui et toi?':
-                text = 'Pas mal, j\' ai pas de cerveau mais on fait avec';
+                message = 'Pas mal, j\' ai pas de cerveau mais on fait avec';
                 break;
             case 'Non ça va pas' : 
-                text = 'Ta vie est cool.'
+                message = 'Ta vie est cool.'
                 break;
             case 'Ca va?':
-                text = 'Evite ce genre de question, je vais finir par faire une random'; 
+                message = 'Evite ce genre de question, je vais finir par faire une random'; 
+                break;
+            default: 
+                message = 'T\'as oublié un ; dans le code, ça risque pas de marcher.';
         }
-        if(text != 'Random') {
-        bot.sendMessage(text, conversationID)
-            .then(console.log)
-            .catch(console.error);
+
+        // Post a message
+        if(message != '') {
+            bot.sendMessage(message, conversationID)
+                .then(console.log)
+                .catch(console.error);
         }
     }
 });
