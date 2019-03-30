@@ -42,18 +42,22 @@ bot.on('message', (event) => {
     console.log(event);
     let text = 'Random';
 
-    switch(event.text) {
-        case 'Bonjour': 
+
+
+    switch(event.text.toLowerCase()) {
+        case 'bonjour': 
             text = 'Bonjour ça va?';
             break;
-        case 'Oui et toi?':
+        case 'oui et toi?':
             text = 'Pas mal, j\' ai pas de cerveau mais on fait avec';
             break;
-        case 'Non ça va pas' : 
+        case 'non ça va pas' : 
             text = 'Ta vie est cool.'
             break;
-        case 'Ca va?':
+        case 'ca va?':
             text = 'Evite ce genre de question, je vais finir par faire une random'; 
+        case 'tu joue a wow?':
+            text = 'Oui, pour la Horde!'; 
     }
     if(text != 'Random') {
     bot.sendMessage(text, conversationID)
