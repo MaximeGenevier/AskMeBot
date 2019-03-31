@@ -25,6 +25,7 @@
     "@slack/web-api": "^5.0.0",
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
+    "log4js": "^4.1.0",
     "recastai": "^4.0.0",
     "request": "^2.88.0",
     "sapcai": "^4.1.0",
