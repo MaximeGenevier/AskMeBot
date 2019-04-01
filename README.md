@@ -16,6 +16,12 @@ Add .env file to root project directory which contains API keys
   git push origin development
 ```
 
+# Allow SAP Conversational AI to call localhost
+``` shell
+  ./ngrock http 3000
+```
+Copy https link into sap conversational ai bot project settings
+
 # Start bot
 
 ``` shell
