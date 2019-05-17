@@ -16,7 +16,8 @@ const askMeBot              = new RTMClient(slackBotToken);
 const sapcaiRequestToken    = process.env.SAPCAI_REQUEST_TOKEN;
 const buildAI               = new sapcai.build(sapcaiRequestToken, 'fr');
 
-const conversationID        = 'CGC6TEYKG';
+const conversationID        = process.env.SLACK_CONV_ID;
+const botID                 = process.env.SLACK_BOT_ID;
 
 // Start bot
 askMeBot.start()
@@ -27,11 +28,11 @@ askMeBot.on('message', (event) => {
     console.log(event);
     let text = event.text;
 
-    // Bot should answer only if he was tag into a message
-    if(text != undefined && text.includes('UH7D2954Z')){
+    // Bot should answer only if it was tag into a message
+    if(text != undefined && text.includes(botID)){
 
         // Trim text
-        text = text.replace('<@UH7D2954Z> ', '');
+        text = text.replace(`<@${botID}> `, '');
 
         buildAI.dialog({ type: 'text', content: text}, { conversationId: conversationID })
             .then((res) => {

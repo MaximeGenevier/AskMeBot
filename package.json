@@ -23,6 +23,7 @@
     "@slack/events-api": "^2.2.0",
     "@slack/rtm-api": "^5.0.0",
     "@slack/web-api": "^5.0.0",
+    "axios": "^0.18.0",
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
     "log4js": "^4.1.0",

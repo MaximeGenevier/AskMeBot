@@ -11,13 +11,13 @@ const bodyParser    = require('body-parser');
 const routes        = require('./routes/routes');
 
 require('dotenv').config();
-require('./bot')
+const askMeBot      = require('./bot');
 
 /**
  * Configuration
  */
 
-const port                  = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 /**
  * Express server
@@ -30,4 +30,3 @@ app.use(bodyParser.json());
 routes(app);
 
 app.listen(port, () =>  console.log(`Server listening on port ${port}`));
-
